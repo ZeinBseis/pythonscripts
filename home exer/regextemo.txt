@@ -1,0 +1,17 @@
+pattern = re.compile("^[a-z]{3} [0-9]{3,5} [^a-zA-Z0-9]{1}[A-Z]{0,2}$")
+
+
+^ asserts the start of the string.
+[a-z]{3} matches exactly three lowercase letters from a to z.
+matches a single space character.
+[0-9]{3,5} matches a sequence of three to five digits (0-9).
+matches a single space character.
+[^a-zA-Z0-9]{1} matches any single character that is not an alphanumeric character (a-z, A-Z, 0-9).
+[A-Z]{0,2} matches zero to two uppercase letters from A to Z.
+$ asserts the end of the string.
+
+Here are some examples of strings that would match this pattern:
+
+"abc 123 xyz"
+"def 9876 !A"
+"xyz 54321 $"
